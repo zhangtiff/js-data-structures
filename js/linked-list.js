@@ -129,6 +129,17 @@ function LinkedList () {
 		return size;
 	}
 
+	this.toArray = function () {
+		var result = [];
+		var curr = head;
+		for (var i = 0; i < size; i++) {
+			result[i] = curr.getData();
+			curr = curr.getNext();
+			i++;
+		}
+		return result; 
+	}
+
 	function Node (d, n) {
 		var data = d;
 		var next = n;
